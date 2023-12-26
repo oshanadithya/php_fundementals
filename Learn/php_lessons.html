@@ -1,0 +1,197 @@
+<!-- PHP Lessons -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body> -->
+
+    <!--  --------------------------------------------------------------------->
+    <!-- if statement -->
+
+    <!-- <?php 
+        $name = "Dark Matter ";
+        $read = false;
+
+        if($read) {
+            $message = "You have read $name";
+        }
+        else {
+            $message = "You have not read $name";
+        }
+    ?>
+
+    <h1>
+        <?= $message ?>
+    </h1> -->
+    <!--  --------------------------------------------------------------------->
+
+    <!--  --------------------------------------------------------------------->
+    <!-- simple array loop -->
+
+    <!-- <h1>
+        Recomend Books
+    </h1>
+
+    <?php 
+        $books = [
+            "Do Androids Dream of Electric Sheep",
+            "The Langoliers",
+            "Hail Mary"
+        ];
+    ?>
+
+    <ul>
+        <?php foreach ($books as $book) {
+            echo "<li>{$book}</li>";
+        }   
+        ?>
+    </ul> -->
+    <!--  --------------------------------------------------------------------->
+
+    <!--  --------------------------------------------------------------------->
+    <!-- Associative Arrays -->
+
+    <!-- <?php 
+        $books = [
+            [ 
+                'name' => 'Do Androids Dream of Electric Sheep',
+                'author' => 'Phili K. Dicks',
+                'url' => 'http://example.com'
+            ],
+            [ 
+                'name' => 'Project Hail Mary',
+                'author' => 'Andy Weir',
+                'url' => 'http://example.com'
+            ]
+        ];
+    ?>
+
+    <ul>
+        <?php foreach ($books as $book) : ?>
+            <li>
+                <a href="<?= $book['url']?>">
+                    <?= $book['name']; ?>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul> -->
+    <!--  --------------------------------------------------------------------->        
+
+    <!--  --------------------------------------------------------------------->
+    <!--Filters -->
+
+    <!-- <?php 
+        $books = [
+            [ 
+                'name' => 'Do Androids Dream of Electric Sheep',
+                'author' => 'Phili K. Dicks',
+                'releaseYear' => 2021,
+                'url' => 'http://example.com'
+            ],
+            [ 
+                'name' => 'Project Hail Mary',
+                'author' => 'Andy Weir',
+                'releaseYear' => 2022,
+                'url' => 'http://example.com'
+            ],
+            [ 
+                'name' => 'The Martian',
+                'author' => 'Andy Weir',
+                'releaseYear' => 2023,
+                'url' => 'http://example.com'
+            ]
+        ];
+    ?>
+
+    <ul>
+        <?php foreach ($books as $book) : ?>
+            <?php if ($book['author'] === 'Andy Weir') : ?>
+                <li>
+                    <a href="<?= $book['url']?>">
+                        <?= $book['name']; ?>
+                        (<?= $book['releaseYear'] ?>) - By <?= $book['author'] ?>
+                    </a>
+                </li>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </ul> -->
+    <!--  --------------------------------------------------------------------->
+
+    <!--  --------------------------------------------------------------------->
+    <!--Filters $ Functions-->
+
+    <!-- <?php 
+        $books = [
+            [ 
+                'name' => 'Do Androids Dream of Electric Sheep',
+                'author' => 'Phili K. Dicks',
+                'releaseYear' => 2021,
+                'url' => 'http://example.com'
+            ],
+            [ 
+                'name' => 'Project Hail Mary',
+                'author' => 'Andy Weir',
+                'releaseYear' => 2022,
+                'url' => 'http://example.com'
+            ],
+            [ 
+                'name' => 'The Martian',
+                'author' => 'Andy Weir',
+                'releaseYear' => 2023,
+                'url' => 'http://example.com'
+            ]
+        ];
+
+        function filterByAuthor($books, $author) {
+            $filteredBooks = [];
+
+            foreach ($books as $book) {
+                if ($book['author'] === $author) {
+                    $filteredBooks[] = $book;
+                }
+            }
+
+            return $filteredBooks;
+        }
+    ?>
+
+    <ul>
+        <?php foreach (filterByAuthor($books, 'Phili K. Dicks') as $book) : ?>
+            <li>
+                <a href="<?= $book['url']?>">
+                    <?= $book['name']; ?>
+                    (<?= $book['releaseYear'] ?>) - By <?= $book['author'] ?>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul> -->
+
+<!--  --------------------------------------------------------------------->
+
+<!--  --------------------------------------------------------------------->
+
+    <!-- var_dump using function -->
+
+    <!-- function dd($value) {
+    echo "<pre>";
+    var_dump($value);
+    echo "</pre>";
+
+    }
+    dd($_SERVER); -->
+
+<!--  --------------------------------------------------------------------->
+
+<!--  --------------------------------------------------------------------->
+
+    <!-- echo -->
+
+    <!-- echo $_SERVER['REQUEST_URI']; -->
+
+<!--  --------------------------------------------------------------------->
+    
+<!-- </body>
+</html> -->
